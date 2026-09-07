@@ -1,0 +1,131 @@
+/* ═══════════════════════════════════════════════════
+   SWARNBHOOMI — GLOBAL STYLES
+   Light · Classic · Grand
+═══════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Palette */
+  --ivory:      #FAF7F2;
+  --ivory-deep: #F2EDE4;
+  --ivory-card: #FFFDF9;
+  --maroon:     #7B1C2E;
+  --maroon-dk:  #5A1220;
+  --maroon-lt:  #9D2A40;
+  --gold:       #B8860B;
+  --gold-lt:    #D4A017;
+  --gold-pale:  #F0D98A;
+  --gold-bg:    #FBF5E0;
+  --charcoal:   #2C2C2C;
+  --stone:      #6B6560;
+  --stone-lt:   #9E9890;
+  --border:     rgba(184,134,11,0.22);
+  --border-lt:  rgba(184,134,11,0.12);
+  --shadow:     0 4px 40px rgba(123,28,46,0.08);
+  --shadow-lg:  0 12px 60px rgba(123,28,46,0.14);
+
+  /* Type */
+  --serif:      'Playfair Display', Georgia, serif;
+  --sans:       'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  background: var(--ivory);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a  { text-decoration: none; color: inherit; }
+
+/* ── scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--maroon); border-radius: 3px; }
+
+/* ── utility ── */
+.serif { font-family: var(--serif); }
+
+.gold-rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+  margin: 20px 0 28px;
+}
+.gold-rule.center { margin-left: auto; margin-right: auto; }
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--maroon);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 2px;
+}
+.btn-primary:hover { background: var(--maroon-dk); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--maroon);
+  padding: 13px 32px;
+  border-radius: 2px;
+  border: 1.5px solid var(--maroon);
+}
+.btn-outline:hover { background: var(--maroon); color: #fff; transform: translateY(-2px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 2px;
+}
+.btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
+
+/* ── section wrapper ── */
+.section { padding: 100px 80px; }
+.section-sm { padding: 64px 80px; }
+
+@media (max-width: 1024px) { .section, .section-sm { padding: 72px 40px; } }
+@media (max-width: 768px)  { .section, .section-sm { padding: 56px 24px; } }
+
+/* ── badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 7px 14px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  color: var(--gold);
+  background: var(--gold-bg);
+}
