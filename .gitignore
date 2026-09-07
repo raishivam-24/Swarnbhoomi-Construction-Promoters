@@ -1,4 +1,15 @@
+# dependencies
 node_modules/
+
+# build
 dist/
-.env
+
+# Vercel
 .vercel/
+
+# environment
+.env
+.env.local
+
+# logs
+npm-debug.log*
