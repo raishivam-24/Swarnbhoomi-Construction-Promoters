@@ -27,7 +27,7 @@ export default function Footer() {
             <button className="btn btn-gold" onClick={() => scrollTo('#contact')}>
               Book Free Consultation
             </button>
-            <a href="tel:+91" className="btn btn-hero-outline footer-call">
+            <a href="tel:+916005538340" className="btn btn-hero-outline footer-call">
               📞 Call Now
             </a>
           </div>
@@ -39,11 +39,7 @@ export default function Footer() {
         <div className="footer-brand-col">
           {/* Logo */}
           <div className="footer-logo">
-            <img
-              src="/logo.png"
-              alt="Swarnbhoomi Construction & Promoters"
-              className="footer-logo-image"
-            />
+            <image src="/logo.png" alt="Swarnbhoomi Logo" className="footer-logo-img" />
             <div>
               <div className="footer-logo-name">Swarnbhoomi</div>
               <div className="footer-logo-sub">Construction & Promoters</div>
@@ -81,11 +77,11 @@ export default function Footer() {
           </div>
           <div className="footer-addr-item">
             <span>📞</span>
-            <a href="tel:+91">+91 XXXXX XXXXX</a>
+            <a href="tel:+916005538340">60055 38340</a>
           </div>
           <div className="footer-addr-item">
             <span>📧</span>
-            <a href="mailto:info@swarnbhoomi.in">info@swarnbhoomi.in</a>
+            <a href="mailto:swarnbhoomiconstruction@gmail.com">swarnbhoomiconstruction@gmail.com</a>
           </div>
         </div>
       </div>

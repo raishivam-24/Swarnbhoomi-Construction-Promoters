@@ -158,3 +158,114 @@
   .contact-form-wrap { padding: 28px 20px; }
   .form-row-2 { grid-template-columns: 1fr; }
 }
+
+/* ── Owner call buttons ── */
+.owner-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.owner-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--maroon);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.owner-btn:hover { background: var(--maroon-dk); transform: translateY(-2px); }
+.ob-icon { font-size: 18px; }
+.ob-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+.ob-num { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 0.04em; }
+
+/* ── WhatsApp buttons ── */
+.wa-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.wa-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  justify-content: center;
+}
+.wa-btn:hover { background: #128C7E; transform: translateY(-2px); }
+
+/* ── WA Submit button ── */
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+.btn-wa:hover:not(:disabled) { background: #128C7E; transform: translateY(-1px); }
+.btn-wa:disabled { opacity: 0.7; cursor: not-allowed; }
+.form-submit.btn-wa { width: 100%; justify-content: center; }
+
+.form-wa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #25D366;
+  background: rgba(37,211,102,0.1);
+  border: 1px solid rgba(37,211,102,0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.form-note {
+  font-size: 11px;
+  color: var(--stone-lt);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Info link style */
+.info-link {
+  display: block;
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.info-link:hover { color: var(--maroon); }
+
+/* Success WA buttons */
+.success-wa-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.success-wa-btns .btn-wa { justify-content: center; font-size: 13px; padding: 12px 20px; }
+
+@media (max-width: 480px) {
+  .owner-btns, .wa-btns { grid-template-columns: 1fr; }
+}
