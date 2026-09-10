@@ -40,7 +40,7 @@ export default function About() {
         <div className="about-images">
           <div className="about-img-main">
             <img
-              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=85"
+              src="/image/3a/building-dome.png"
               alt="Swarnbhoomi construction quality"
             />
             <div className="about-img-badge">
@@ -49,11 +49,11 @@ export default function About() {
           </div>
           <div className="about-img-side">
             <img
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=85"
+              src="/image/arpa/front-view.png"
               alt="Premium construction"
             />
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85"
+              src="/image/textile-market/front-gate.png"
               alt="Swarnbhoomi office Bilaspur"
             />
           </div>
