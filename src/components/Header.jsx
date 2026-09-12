@@ -5,6 +5,7 @@ const NAV = [
   { label: 'Home',     href: '#home' },
   { label: 'About',    href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Owner',    href: '#owners' },
   { label: 'Location', href: '#location' },
   { label: 'Contact',  href: '#contact' },
 ]
@@ -32,10 +33,7 @@ export default function Header() {
         {/* Logo */}
         <button className="header__logo" onClick={() => go('#home')}>
           <div className="logo-emblem">
-            <img
-              src="/logo.png"
-              alt="Swarnbhoomi Construction & Promoters"
-            />
+            <img src="/logo.png" alt="Swarnbhoomi Logo" className="footer-logo-img" />
           </div>
           <div className="logo-text">
             <span className="logo-name">Swarnbhoomi</span>

@@ -5,6 +5,7 @@ import About   from './components/About.jsx'
 import Projects from './components/Projects.jsx'
 import Location from './components/Location.jsx'
 import Contact  from './components/Contact.jsx'
+import Owners   from './components/Owner.jsx'
 import Footer   from './components/Footer.jsx'
 
 /* Floating WhatsApp + Call */
@@ -61,6 +62,7 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
+        <Owners />
         <Location />
         <Contact />
       </main>

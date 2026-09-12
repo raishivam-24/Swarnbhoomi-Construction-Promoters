@@ -48,16 +48,18 @@
   gap: 48px;
 }
 
-.footer-logo {
+.logo-emblem {
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.footer-logo-image {
-  width: 52px;
-  height: 52px;
+.logo-emblem img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
 }

@@ -21,7 +21,7 @@ const PROJECTS = [
     badge: "Bilaspur's Most Premium & Affordable Township",
     rera: 'TNC Approved',
     price: '₹2,850 per sq.ft',
-    phone: ['8103936564'],
+    phone: ['60055 38340'],
     address: 'Near New Multispeciality Hospital, Koni Road, Bilaspur (C.G.)',
     highlights: ['Two Spacious Gardens', 'Wide Roads', '24/7 Security', 'Mandir', 'Community Hall'],
     amenities: [
@@ -65,7 +65,7 @@ const PROJECTS = [
     badge: 'The New Business Destination of Bilaspur — Where Business Meets Growth',
     rera: 'RERA Registered',
     price: 'On Request',
-    phone: ['6005538340', '9926156896'],
+    phone: ['60055 38340'],
     address: 'Sendri, Near Jungle Dhaba, Koni, Bilaspur (C.G.) | National Highway, Ratanpur Road, Bilaspur',
     highlights: ['Wide Roads', 'Multiple Parking', 'Separate Transformer', 'Street Lights', 'Drainage System', '24/7 Water Supply'],
     amenities: [
@@ -108,7 +108,7 @@ const PROJECTS = [
     badge: 'TNCP RERA Registered — Gandhi Chowk Bilaspur',
     rera: 'TNCP RERA Registered',
     price: 'On Request',
-    phone: ['6005538340', '9926156896'],
+    phone: ['9926156896'],
     address: 'Gandhi Chowk, Bilaspur (C.G.)',
     highlights: ["44' Grand Entrance Gate", '35000 sq.ft Basement Parking', '2 High Speed Lifts', '24hr Electricity + Power Backup', 'RO Water Supply', 'CCTV + Security'],
     amenities: [
@@ -155,7 +155,7 @@ const PROJECTS = [
     badge: 'Make Your Business the Center of Attraction',
     rera: 'RERA Approved',
     price: 'On Request',
-    phone: ['9926156896', '6005538340'],
+    phone: ['9926156896'],
     address: 'Ahead of Rama World, Bilaspur-Raipur Road (Chhattisgarh) · G-37, Swarn Chamber, In front of Chhattisgarh High Court, Bilaspur (CG)',
     highlights: ['Duplex Shops', 'In-Built Bank', 'In-Built Restaurant', 'RERA Approved', 'CCTV Cameras', '24/7 Security Guards', 'Drainage System', 'Dedicated Parking'],
     amenities: [
@@ -196,7 +196,7 @@ const PROJECTS = [
     badge: 'आपके सपनों का पता — शहर से नहीं दूर, प्रकृति का आनंद भरपूर',
     rera: 'PCGRERA300824001817',
     price: 'On Request',
-    phone: ['7898910105', '7898910106'],
+    phone: ['9926156896'],
     address: 'Office: Ganesh Vatika, Ashok Nagar, Birkona Road, Bilaspur · Site: Ashok Nagar, Birkona Road, Bilaspur (C.G.)',
     highlights: ['Grand Entry', 'Landscape Garden', 'Kids Play Area', 'Open Gym', 'Temple', 'Street Light', 'Gathering Space', 'Boundary Wall', 'Gazebo', 'CCTV Secure', 'Water Supply', 'Site on Road'],
     amenities: [

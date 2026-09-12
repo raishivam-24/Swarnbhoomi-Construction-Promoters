@@ -39,7 +39,9 @@ export default function Footer() {
         <div className="footer-brand-col">
           {/* Logo */}
           <div className="footer-logo">
-            <image src="/logo.png" alt="Swarnbhoomi Logo" className="footer-logo-img" />
+            <div className="logo-emblem">
+            <img src="/logo.png" alt="Swarnbhoomi Logo" className="footer-logo-img" />
+          </div>
             <div>
               <div className="footer-logo-name">Swarnbhoomi</div>
               <div className="footer-logo-sub">Construction & Promoters</div>
