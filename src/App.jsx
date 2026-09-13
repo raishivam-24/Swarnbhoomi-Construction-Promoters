@@ -21,7 +21,7 @@ function FloatButtons() {
       gap: 10,
     }}>
       <a
-        href="https://wa.me/916005538340"
+        href="https://wa.me/919926156896"
         target="_blank"
         rel="noopener noreferrer"
         title="WhatsApp"
@@ -37,7 +37,7 @@ function FloatButtons() {
         onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
       >💬</a>
       <a
-        href="tel:+916005538340"
+        href="tel:+9199261 56896"
         title="Call Us"
         style={{
           width: 48, height: 48, borderRadius: '50%',

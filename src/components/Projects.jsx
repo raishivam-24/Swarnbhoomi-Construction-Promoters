@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './Projects.css'
 
 const PROJECTS = [
@@ -14,8 +14,10 @@ const PROJECTS = [
     img: '/image/krishna-vihar/poster.png',
     imgs: [
       '/image/krishna-vihar/poster.png',
+      '/image/krishna-vihar/top-view.png',
       '/image/krishna-vihar/layout.png',
     ],
+    video: '/videos/krishna_vihar_video.mp4',
     tag: 'Premium Township',
     tagline: 'Premium Living. Affordable Price.',
     badge: "Bilaspur's Most Premium & Affordable Township",
@@ -41,7 +43,6 @@ const PROJECTS = [
     ],
     nearbyLocations: [],
     desc: 'एक सपना, एक विश्वास, एक बेहतर जीवन की शुरुआत। Bilaspur Koni Main Road, near New Commissioner Office — a TNC approved residential project with premium infrastructure and modern amenities. Secure investment + great location + excellent future returns.',
-    // instagram: 'https://www.instagram.com/shriramparkbsp',
     ctaLabel: 'Book Now — ₹2,850/sq.ft',
   },
   {
@@ -56,10 +57,12 @@ const PROJECTS = [
     img: '/image/arpa/front-view.png',
     imgs: [
       '/image/arpa/front-view.png',
+      '/image/arpa/image.png',
       '/image/arpa/layout.png',
       '/image/arpa/construction-area.png',
       '/image/arpa/poster.png',
     ],
+    video: '/videos/arpa_video.mp4',
     tag: "Bilaspur's Biggest",
     tagline: "Bilaspur's Most Futuristic & Biggest Commercial Project",
     badge: 'The New Business Destination of Bilaspur — Where Business Meets Growth',
@@ -99,10 +102,14 @@ const PROJECTS = [
       '/image/3a/building-side.png',
       '/image/3a/building-dome.png',
       '/image/3a/construction.png',
+      '/image/3a/3d-front-view.png',
+      '/image/3a/3d-top-view.png',
       '/image/3a/3d-render.png',
+      '/image/3a/layout.png',
       '/image/3a/classroom.png',
       '/image/3a/ad-poster.png',
     ],
+    video: '/videos/3a_video.mp4',
     tag: 'Landmark',
     tagline: 'Premium Commercial Shop For Sale @ Prime Location',
     badge: 'TNCP RERA Registered — Gandhi Chowk Bilaspur',
@@ -141,15 +148,16 @@ const PROJECTS = [
     shortLocation: 'Bilaspur-Raipur Road',
     units: 'Duplex Shops',
     status: 'Ongoing',
-    statusColor: '#2D6A4F',
-    img: '/image/textile-market/front-view.png',
+    statusColor: '#B8860B',
+    img: '/image/textile-market/front-gate.png',
     imgs: [
-      '/image/textile-market/front-view.png',
-      '/image/textile-market/board.png',
       '/image/textile-market/front-gate.png',
+      '/image/textile-market/board.png',
+      '/image/textile-market/front-gate2.png',
       '/image/textile-market/construction.png',
       '/image/textile-market/poster.png',
     ],
+    video: '/videos/video_textile_market.mp4',
     tag: "Division's Largest",
     tagline: "Bilaspur Division's Largest Textile Market",
     badge: 'Make Your Business the Center of Attraction',
@@ -185,12 +193,14 @@ const PROJECTS = [
     units: 'Residential Plots',
     status: 'Completed',
     statusColor: '#2D6A4F',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85',
+    img: '/image/shree/image2.png',
     imgs: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85',
-      'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=85',
-      'https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=85',
+      '/image/shree/image1.png',
+      '/image/shree/image2.png',
+      '/image/shree/layout.png',
+      '/image/shree/poster.png',
     ],
+    video: null,
     tag: 'RERA Approved',
     tagline: 'लोकेशन ऐसी — जहाँ रहने को दिल करे',
     badge: 'आपके सपनों का पता — शहर से नहीं दूर, प्रकृति का आनंद भरपूर',
@@ -218,13 +228,13 @@ const PROJECTS = [
     ],
     nearbyLocations: [
       { place: 'Railway Station', time: '20 Min', icon: '🚆' },
-      { place: 'School', time: '5 Min', icon: '🏫' },
-      { place: 'Market', time: '5 Min', icon: '🛒' },
-      { place: 'Hospital', time: '10 Min', icon: '🏥' },
-      { place: 'Petrol Pump', time: '7 Min', icon: '⛽' },
-      { place: 'Temple', time: '5 Min', icon: '🛕' },
+      { place: 'School',          time: '5 Min',  icon: '🏫' },
+      { place: 'Market',          time: '5 Min',  icon: '🛒' },
+      { place: 'Hospital',        time: '10 Min', icon: '🏥' },
+      { place: 'Petrol Pump',     time: '7 Min',  icon: '⛽' },
+      { place: 'Temple',          time: '5 Min',  icon: '🛕' },
     ],
-    desc: 'आपके सपनों का पता — Shri Ram Park. RERA Approved (PCGRERA300824001817). 100+ families already living. Premium plotted township in Ashok Nagar, Birkona Road, Bilaspur. आज प्लॉट की खरीददारी, मतलब कल की तरक्की! Plots in a premium township with all modern amenities, eco-friendly environment, and excellent connectivity.',
+    desc: 'आपके सपनों का पता — Shri Ram Park. RERA Approved (PCGRERA300824001817). 100+ families already living. Premium plotted township in Ashok Nagar, Birkona Road, Bilaspur. आज प्लॉट की खरीददारी, मतलब कल की तरक्की!',
     instagram: 'https://www.instagram.com/shriramparkbsp',
     ctaLabel: 'Book Now — 7898910105',
   },
@@ -232,15 +242,32 @@ const PROJECTS = [
 
 const FILTERS = ['All', 'Residential', 'Commercial']
 
+// ── Video thumbnail item type marker
+const VIDEO_MARKER = '__VIDEO__'
+
 export default function Projects() {
   const [filter,   setFilter]   = useState('All')
   const [selected, setSelected] = useState(null)
   const [imgIdx,   setImgIdx]   = useState(0)
+  const videoRef = useRef(null)
 
   const visible = filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.type === filter)
 
   const openModal = (p) => { setSelected(p); setImgIdx(0) }
-  const closeModal = () => setSelected(null)
+  const closeModal = () => {
+    // Pause video on close
+    if (videoRef.current) { videoRef.current.pause() }
+    setSelected(null)
+  }
+
+  // Build combined media list: images first, then video slot at end if exists
+  const getMediaList = (p) => {
+    const list = p.imgs.map((src, i) => ({ type: 'image', src, idx: i }))
+    if (p.video) list.push({ type: 'video', src: p.video, idx: p.imgs.length })
+    return list
+  }
+
+  const isVideoSelected = selected && selected.video && imgIdx === selected.imgs.length
 
   return (
     <section className="projects section" id="projects">
@@ -259,19 +286,6 @@ export default function Projects() {
         </p>
       </div>
 
-      {/* Stats */}
-      {/* <div className="projects-stats">
-        <div className="ps-item"><span className="ps-num serif">6+</span><span className="ps-lbl">Projects</span></div>
-        <div className="ps-divider" />
-        <div className="ps-item"><span className="ps-num serif">3</span><span className="ps-lbl">Completed</span></div>
-        <div className="ps-divider" />
-        <div className="ps-item"><span className="ps-num serif">3</span><span className="ps-lbl">Ongoing</span></div>
-        <div className="ps-divider" />
-        <div className="ps-item"><span className="ps-num serif">500+</span><span className="ps-lbl">Happy Families</span></div>
-        <div className="ps-divider" />
-        <div className="ps-item"><span className="ps-num serif">8103936564</span><span className="ps-lbl">Call Us</span></div>
-      </div> */}
-
       {/* Filters */}
       <div className="projects-filters">
         {FILTERS.map(f => (
@@ -285,6 +299,12 @@ export default function Projects() {
           <div className="project-card" key={p.id} onClick={() => openModal(p)}>
             <div className="project-img">
               <img src={p.img} alt={p.name} loading="lazy" />
+              {p.video && (
+                <div className="project-video-badge">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Video
+                </div>
+              )}
               <div className="project-tag">{p.tag}</div>
               <div className="project-overlay"><span className="overlay-hint">View Details</span></div>
             </div>
@@ -306,7 +326,7 @@ export default function Projects() {
               </div>
               <div className="project-actions">
                 <a href={`tel:${p.phone[0]}`} className="btn btn-primary proj-btn" onClick={e => e.stopPropagation()}>
-                  📞 {p.phone[0].replace(/(\d{5})(\d{5})/, '$1 $2')}
+                  📞 {p.phone[0]}
                 </a>
                 {p.instagram && (
                   <a href={p.instagram} target="_blank" rel="noopener noreferrer" className="btn proj-btn-ig" onClick={e => e.stopPropagation()}>
@@ -325,34 +345,66 @@ export default function Projects() {
         <div className="proj-modal-bg" onClick={closeModal}>
           <div className="proj-modal" onClick={e => e.stopPropagation()}>
 
-            {/* Close */}
             <button className="modal-close" onClick={closeModal}>✕</button>
 
-            {/* Left — images */}
+            {/* Left — media panel */}
             <div className="modal-left">
+
+              {/* Main display — video or image */}
               <div className="modal-main-img">
-                <img src={selected.imgs[imgIdx]} alt={selected.name} />
-                <div className="modal-tag">{selected.tag}</div>
-                <span className="modal-status" style={{ color: selected.statusColor, background: selected.statusColor + '15', borderColor: selected.statusColor + '40' }}>
-                  {selected.status}
-                </span>
+                {isVideoSelected ? (
+                  <video
+                    ref={videoRef}
+                    src={selected.video}
+                    controls
+                    autoPlay
+                    className="modal-video-player"
+                    poster={selected.imgs[0]}
+                  />
+                ) : (
+                  <img src={selected.imgs[imgIdx]} alt={selected.name} />
+                )}
+                {!isVideoSelected && (
+                  <>
+                    <div className="modal-tag">{selected.tag}</div>
+                    <span className="modal-status" style={{ color: selected.statusColor, background: selected.statusColor + '15', borderColor: selected.statusColor + '40' }}>
+                      {selected.status}
+                    </span>
+                  </>
+                )}
               </div>
-              {/* Thumbnails */}
+
+              {/* Thumbnails — images + video slot */}
               <div className="modal-thumbs">
-                {selected.imgs.map((img, i) => (
-                  <div key={i} className={`modal-thumb${i === imgIdx ? ' modal-thumb--active' : ''}`} onClick={() => setImgIdx(i)}>
-                    <img src={img} alt="" />
+                {getMediaList(selected).map((item) => (
+                  <div
+                    key={item.idx}
+                    className={`modal-thumb${imgIdx === item.idx ? ' modal-thumb--active' : ''}`}
+                    onClick={() => {
+                      if (videoRef.current) videoRef.current.pause()
+                      setImgIdx(item.idx)
+                    }}
+                  >
+                    {item.type === 'video' ? (
+                      <div className="thumb-video-slot">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        <span>Video</span>
+                      </div>
+                    ) : (
+                      <img src={item.src} alt="" />
+                    )}
                   </div>
                 ))}
               </div>
+
               {/* Quick contact */}
               <div className="modal-quick-contact">
                 {selected.phone.map(ph => (
                   <a key={ph} href={`tel:${ph}`} className="mqc-btn mqc-call">
-                    📞 {ph.replace(/(\d{5})(\d{5})/, '$1 $2')}
+                    📞 {ph}
                   </a>
                 ))}
-                <a href={`https://wa.me/91${selected.phone[0]}`} target="_blank" rel="noopener noreferrer" className="mqc-btn mqc-wa">
+                <a href={`https://wa.me/91${selected.phone[0].replace(/\s/g,'')}`} target="_blank" rel="noopener noreferrer" className="mqc-btn mqc-wa">
                   💬 WhatsApp
                 </a>
               </div>
@@ -363,6 +415,7 @@ export default function Projects() {
               <div className="modal-type-row">
                 <span className="modal-type-badge">{selected.type}</span>
                 {selected.rera && <span className="modal-rera-badge">✅ {selected.rera}</span>}
+                {selected.video && <span className="modal-video-badge">▶ Video Available</span>}
               </div>
               <h2 className="modal-name serif">{selected.name}</h2>
               <p className="modal-tagline serif"><em>"{selected.tagline}"</em></p>
@@ -370,7 +423,6 @@ export default function Projects() {
 
               <div className="gold-rule" style={{ margin: '16px 0' }} />
 
-              {/* Info row */}
               <div className="modal-info-row">
                 <div className="modal-info-item">
                   <span className="mi-label">📍 Address</span>
@@ -388,10 +440,8 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Description */}
               <p className="modal-desc">{selected.desc}</p>
 
-              {/* Offerings */}
               {selected.offerings.length > 0 && (
                 <div className="modal-offerings">
                   <div className="modal-section-label">Premium Offerings</div>
@@ -406,7 +456,6 @@ export default function Projects() {
                 </div>
               )}
 
-              {/* Amenities */}
               <div className="modal-amenities">
                 <div className="modal-section-label">World Class Amenities</div>
                 <div className="amenities-mini-grid">
@@ -419,7 +468,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Nearby locations */}
               {selected.nearbyLocations.length > 0 && (
                 <div className="modal-nearby">
                   <div className="modal-section-label">Nearest Locations</div>
@@ -435,7 +483,6 @@ export default function Projects() {
                 </div>
               )}
 
-              {/* Actions */}
               <div className="modal-actions">
                 <a href={`tel:${selected.phone[0]}`} className="btn btn-primary modal-act-btn">
                   {selected.ctaLabel}

@@ -40,7 +40,7 @@ export default function About() {
         <div className="about-images">
           <div className="about-img-main">
             <img
-              src="/image/3a/building-dome.png"
+              src="/image/3a/3d-top-view.png"
               alt="Swarnbhoomi construction quality"
             />
             <div className="about-img-badge">

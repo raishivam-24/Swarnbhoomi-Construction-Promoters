@@ -1,9 +1,11 @@
 import './Hero.css'
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=85',
-  'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1800&q=85',
-  'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1800&q=85',
+  '/image/3a/3d-render.png',
+  '/image/textile-market/front-gate.png',
+  '/image/arpa/front-view.png',
+  '/image/shree/image1.png',
+  
 ]
 
 import { useState, useEffect } from 'react'

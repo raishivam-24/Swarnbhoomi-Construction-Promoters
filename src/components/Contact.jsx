@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './Contact.css'
 
-const PHONE1 = '916005538340'
-const PHONE2 = '919926156896'
-const DISPLAY1 = '60055 38340'
-const DISPLAY2 = '99261 56896'
+const PHONE2 = '916005538340'
+const PHONE1 = '919926156896'
+const DISPLAY2 = '60055 38340'
+const DISPLAY1 = '99261 56896'
 
 function sendToWhatsApp(form) {
   const msg =
@@ -47,14 +47,14 @@ export default function Contact() {
     {
       icon: '📞',
       label: 'Owner — Direct Lines',
-      lines: [DISPLAY1, DISPLAY2],
-      links: [`tel:+91${DISPLAY1.replace(/\s/g,'')}`, `tel:+91${DISPLAY2.replace(/\s/g,'')}`],
+      lines: [DISPLAY1],
+      links: [`tel:+91${DISPLAY1.replace(/\s/g,'')}`,],
     },
     {
       icon: '💬',
       label: 'WhatsApp',
-      lines: [DISPLAY1, DISPLAY2],
-      wa: [`https://wa.me/${PHONE1}`, `https://wa.me/${PHONE2}`],
+      lines: [DISPLAY1],
+      wa: [`https://wa.me/${PHONE1}`,],
     },
     {
       icon: '🏛️',
@@ -90,17 +90,17 @@ export default function Contact() {
             <a href={`tel:+91${DISPLAY1.replace(/\s/g,'')}`} className="owner-btn">
               <span className="ob-icon">📞</span>
               <div>
-                <div className="ob-label">Owner 1</div>
+                <div className="ob-label">Owner</div>
                 <div className="ob-num">{DISPLAY1}</div>
               </div>
             </a>
-            <a href={`tel:+91${DISPLAY2.replace(/\s/g,'')}`} className="owner-btn">
+            {/* <a href={`tel:+91${DISPLAY2.replace(/\s/g,'')}`} className="owner-btn">
               <span className="ob-icon">📞</span>
               <div>
                 <div className="ob-label">Owner 2</div>
                 <div className="ob-num">{DISPLAY2}</div>
               </div>
-            </a>
+            </a> */}
           </div>
 
           {/* WhatsApp quick buttons */}
@@ -108,9 +108,9 @@ export default function Contact() {
             <a href={`https://wa.me/${PHONE1}`} target="_blank" rel="noopener noreferrer" className="wa-btn">
               <span>💬</span> WhatsApp {DISPLAY1}
             </a>
-            <a href={`https://wa.me/${PHONE2}`} target="_blank" rel="noopener noreferrer" className="wa-btn">
+            {/* <a href={`https://wa.me/${PHONE2}`} target="_blank" rel="noopener noreferrer" className="wa-btn">
               <span>💬</span> WhatsApp {DISPLAY2}
-            </a>
+            </a> */}
           </div>
 
           <div className="info-cards">
@@ -170,9 +170,9 @@ export default function Contact() {
                 <a href={`https://wa.me/${PHONE1}`} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
                   💬 Also message {DISPLAY1}
                 </a>
-                <a href={`https://wa.me/${PHONE2}`} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
+                {/* <a href={`https://wa.me/${PHONE2}`} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
                   💬 Also message {DISPLAY2}
-                </a>
+                </a> */}
               </div>
               <button className="btn btn-outline" style={{ marginTop: 12 }}
                 onClick={() => { setSubmit(false); setForm({ name:'', phone:'', email:'', type:'', msg:'' }) }}>

@@ -194,6 +194,7 @@
   display: grid;
   grid-template-columns: 340px 1fr;
   animation: slideUp 0.3s ease;
+  align-items: start;
 }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
@@ -220,12 +221,18 @@
   display: flex;
   flex-direction: column;
   background: var(--charcoal);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 92vh;
 }
+.modal-left::-webkit-scrollbar { width: 3px; }
+.modal-left::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+
 .modal-main-img {
   position: relative;
-  flex: 1;
-  min-height: 220px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  flex-shrink: 0;
   overflow: hidden;
 }
 .modal-main-img img { width: 100%; height: 100%; object-fit: cover; }
@@ -258,9 +265,12 @@
   gap: 4px;
   padding: 8px;
   background: rgba(0,0,0,0.3);
+  flex-shrink: 0;
 }
 .modal-thumb {
-  height: 52px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   border-radius: 2px;
   overflow: hidden;
   cursor: pointer;
@@ -269,7 +279,13 @@
   opacity: 0.65;
 }
 .modal-thumb:hover { opacity: 0.9; }
-.modal-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.modal-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .modal-thumb--active { border-color: var(--gold); opacity: 1; }
 
 /* Quick contact */
@@ -278,7 +294,8 @@
   flex-direction: column;
   gap: 6px;
   padding: 10px 10px 12px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.25);
+  flex-shrink: 0;
 }
 .mqc-btn {
   display: flex;
@@ -429,4 +446,71 @@
 @media (max-width: 480px) {
   .ps-item { padding: 14px 16px; }
   .modal-actions { flex-direction: column; }
+}
+
+/* ── Video badge on project card ── */
+.project-video-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 4px 9px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Video player in modal ── */
+.modal-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+  aspect-ratio: 3 / 2;
+}
+
+/* ── Video thumbnail slot ── */
+.thumb-video-slot {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.thumb-video-slot svg {
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+}
+.thumb-video-slot span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ── Video badge in modal header ── */
+.modal-video-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: #E50914;
+  padding: 3px 9px;
+  border-radius: 20px;
+  animation: videoPulse 2s ease-in-out infinite;
+}
+@keyframes videoPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
 }

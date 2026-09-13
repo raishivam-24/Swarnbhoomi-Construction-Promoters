@@ -27,7 +27,7 @@ export default function Footer() {
             <button className="btn btn-gold" onClick={() => scrollTo('#contact')}>
               Book Free Consultation
             </button>
-            <a href="tel:+916005538340" className="btn btn-hero-outline footer-call">
+            <a href="tel:+9199261 56896" className="btn btn-hero-outline footer-call">
               📞 Call Now
             </a>
           </div>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
           <div className="footer-addr-item">
             <span>📞</span>
-            <a href="tel:+916005538340">60055 38340</a>
+            <a href="tel:+9199261 56896">99261 56896</a>
           </div>
           <div className="footer-addr-item">
             <span>📧</span>
