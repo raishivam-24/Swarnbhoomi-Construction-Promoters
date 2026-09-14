@@ -75,7 +75,7 @@ export default function Footer() {
           <h4 className="footer-col-title">Reach Us</h4>
           <div className="footer-addr-item">
             <span>📍</span>
-            <span>G-37, Swarn Chambers,<br />Highcourt Road, Bilaspur,<br />Chhattisgarh — 495001</span>
+            <span>3 A’s Commercial Complex, Shop No. 11,<br />3rd Floor,<br />Chhattisgarh — 495001</span>
           </div>
           <div className="footer-addr-item">
             <span>📞</span>

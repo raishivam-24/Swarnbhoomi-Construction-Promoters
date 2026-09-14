@@ -21,7 +21,7 @@ export default function Location() {
           Prime Address,<br /><em>Central Bilaspur</em>
         </h2>
         <p className="location-sub">
-          G-37, Swarn Chambers, Highcourt Road, Bilaspur — 495001, Chhattisgarh
+          3 A’s Commercial Complex, Shop No. 11, 3rd Floor, Chhattisgarh — 495001
         </p>
       </div>
 
@@ -41,7 +41,7 @@ export default function Location() {
             <div className="map-pin">📍</div>
             <div>
               <div className="map-addr-title">Registered Office</div>
-              <div className="map-addr-text">G-37, Swarn Chambers,<br />Chhattisgarh High Court Opposite,<br />Bilaspur, CG — 495001</div>
+              <div className="map-addr-text">3 A’s Commercial Complex, Shop No. 11,<br />3rd Floor,<br />Chhattisgarh — 495001</div>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Location() {
           {/* Direction CTA */}
           <div className="direction-cta">
             <a
-              href="https://maps.google.com/?q=G-37+Swarn+Chambers+Highcourt+Road+Bilaspur+Chhattisgarh"
+              href="https://maps.google.com/?q=3+A%E2%80%99s+Commercial+Complex,+Shop+No.+11,+3rd+Floor,+Chhattisgarh+%E2%80%94+495001"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -72,7 +72,7 @@ export default function Location() {
               </svg>
               Get Directions
             </a>
-            <a href="tel:+91" className="btn btn-outline">
+            <a href="tel:+919926156896" className="btn btn-outline">
               📞 Call Us
             </a>
           </div>

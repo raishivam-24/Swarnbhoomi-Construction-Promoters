@@ -42,7 +42,7 @@ export default function Contact() {
     {
       icon: '📍',
       label: 'Registered Office',
-      lines: ['G-37, Swarn Chambers,', 'Highcourt Road, Bilaspur', 'Chhattisgarh — 495001'],
+      lines: ['3 A’s Commercial Complex, Shop No. 11,', '3rd Floor', 'Chhattisgarh — 495001'],
     },
     {
       icon: '📞',
