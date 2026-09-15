@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import './Projects.css'
+import Lightbox from './Lightbox.jsx'
 
 const PROJECTS = [
   {
@@ -250,6 +251,7 @@ export default function Projects() {
   const [selected, setSelected] = useState(null)
   const [imgIdx,   setImgIdx]   = useState(0)
   const videoRef = useRef(null)
+  const [lb, setLb] = useState(null)
 
   const visible = filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.type === filter)
 
@@ -382,7 +384,11 @@ export default function Projects() {
                     className={`modal-thumb${imgIdx === item.idx ? ' modal-thumb--active' : ''}`}
                     onClick={() => {
                       if (videoRef.current) videoRef.current.pause()
-                      setImgIdx(item.idx)
+                      if (item.type === 'image' && imgIdx === item.idx) {
+                        setLb(item.src)
+                      } else {
+                        setImgIdx(item.idx)
+                      }
                     }}
                   >
                     {item.type === 'video' ? (
@@ -500,6 +506,7 @@ export default function Projects() {
           </div>
         </div>
       )}
+      {lb && <Lightbox src={lb} onClose={() => setLb(null)} />}
     </section>
   )
 }
