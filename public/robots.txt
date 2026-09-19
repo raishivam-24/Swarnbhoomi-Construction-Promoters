@@ -1,0 +1,50 @@
+# =====================================================
+# robots.txt — Swarnbhoomi Construction & Promoters
+# https://swarnbhoomiconstructionandpromoter.co.in
+# =====================================================
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Block access to build/dev folders (not needed in production)
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.vite/
+Disallow: /dist/
+
+# Block any admin or private paths (future-proof)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+
+# Sitemap location
+Sitemap: https://swarnbhoomiconstructionandpromoter.co.in/sitemap.xml
+
+# ── Google ──
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# ── Bing ──
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# ── Google Image Bot ──
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /videos/
+
+# ── Block bad bots ──
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
