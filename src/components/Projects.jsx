@@ -192,8 +192,8 @@ const PROJECTS = [
     location: 'Ashok Nagar, Birkona Road, Bilaspur (C.G.)',
     shortLocation: 'Birkona Road, Bilaspur',
     units: 'Residential Plots',
-    status: 'Completed',
-    statusColor: '#2D6A4F',
+    status: 'Ongoing',
+    statusColor: '#B8860B',
     img: '/image/shree/image2.png',
     imgs: [
       '/image/shree/image1.png',
@@ -201,7 +201,7 @@ const PROJECTS = [
       '/image/shree/layout.png',
       '/image/shree/poster.png',
     ],
-    video: null,
+    video: '/videos/shri_ram_park.mp4',
     tag: 'RERA Approved',
     tagline: 'लोकेशन ऐसी — जहाँ रहने को दिल करे',
     badge: 'आपके सपनों का पता — शहर से नहीं दूर, प्रकृति का आनंद भरपूर',
@@ -242,9 +242,6 @@ const PROJECTS = [
 ]
 
 const FILTERS = ['All', 'Residential', 'Commercial']
-
-// ── Video thumbnail item type marker
-const VIDEO_MARKER = '__VIDEO__'
 
 export default function Projects() {
   const [filter,   setFilter]   = useState('All')
@@ -298,9 +295,22 @@ export default function Projects() {
       {/* Grid */}
       <div className="projects-grid">
         {visible.map(p => (
-          <div className="project-card" key={p.id} onClick={() => openModal(p)}>
-            <div className="project-img">
-              <img src={p.img} alt={p.name} loading="lazy" />
+          <div className={`project-card${p.video ? ' project-card--video' : ''}`} key={p.id} onClick={() => openModal(p)}>
+            <div className={`project-img${p.video ? ' project-img--video' : ''}`}>
+              {p.video ? (
+                <video
+                  className="project-video-bg"
+                  src={p.video}
+                  poster={p.img}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+              ) : (
+                <img src={p.img} alt={p.name} loading="lazy" />
+              )}
               {p.video && (
                 <div className="project-video-badge">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
