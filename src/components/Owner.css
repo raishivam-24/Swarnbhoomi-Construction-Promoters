@@ -17,7 +17,7 @@
 .owners-title em { color: var(--maroon); font-style: italic; }
 .owners-subtitle { font-size: 15px; color: var(--stone); line-height: 1.8; max-width: 520px; }
 
-/* ── Grand Owner Card ── */
+/* ── Owner Card(s) ── */
 .owner-single-wrap { margin-bottom: 72px; }
 
 .owner-card-grand {
@@ -28,6 +28,11 @@
   border-radius: 3px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+}
+
+/* Space between multiple stacked director cards */
+.owner-card-grand + .owner-card-grand {
+  margin-top: 32px;
 }
 
 /* Photo side */
