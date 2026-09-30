@@ -69,7 +69,7 @@ export default function About() {
             & Promoters
           </h2>
           <p className="about-body">
-            A trusted name in Chhattisgarh real estate, Swarnbhoomi Construction & Promoters is headquartered at <strong>G-37, Swarn Chambers, Highcourt Road, Bilaspur — 495001</strong>. We are dedicated to building homes that reflect aspiration, quality, and lasting value.
+            A trusted name in Chhattisgarh real estate, Swarnbhoomi Construction & Promoters is headquartered at <strong>3a Commercial Business Complex, Gandhi Chowk 3rd floor office 11 Bilaspur - 495001, Chhattisgarh</strong>. We are dedicated to building homes that reflect aspiration, quality, and lasting value.
           </p>
           <p className="about-body">
             As a RERA-registered real estate agent and ISO 9001:2015 certified construction company, every project we deliver is backed by the highest standards of quality management and regulatory compliance.
